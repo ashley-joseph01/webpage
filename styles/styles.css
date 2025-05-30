@@ -1,0 +1,222 @@
+
+/* BASIC SETUP */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    outline-width: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+input {
+    border: none;
+}
+
+ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-spacing: 0px;
+    
+}
+
+
+html {
+    min-height: 100dvh;
+    width: 100%;
+}
+
+.gap {
+    flex-grow: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* GENERAL */
+.overlay {
+
+}
+
+    .shadow-top, .shadow-bottom {
+        height: 10dvh;
+        width: 100%;
+        z-index: 1;
+        pointer-events: none; 
+        /* ^ click threw */
+        position: fixed;
+    }
+
+    .shadow-top {
+        top: 0;
+        background-image: linear-gradient(rgb(206 180 248 / 100%), rgb(206 180 248 / 0%));
+    }
+
+    .shadow-bottom {
+        bottom: 0;
+        background-image: linear-gradient(rgb(206 180 248 / 0%), rgb(206 180 248 / 100%));
+    }
+
+body {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(206, 180, 248);
+    color: #4426af;
+    
+}
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 15px;
+        z-index: 2;
+
+        /* background-color: white; */
+
+    } 
+
+        header ul {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header li {
+            color: #4426af;
+            /* background-color: #4426af; */
+            border-color: #3742a1;
+            border-radius: 10px;
+            border: 2px solid;
+            padding: 5px;
+
+            /* background-color: white; */
+
+            
+
+        }
+
+    section {
+
+    }
+
+        .HERO {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+
+            padding: 15px;
+            
+        }
+
+            .blob-container {
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+
+                /* border: 2px solid lightgray; */
+                filter: blur(20px);
+                overflow: hidden;
+                
+            }
+
+                .blob {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    /* background: linear-gradient(181deg,rgba(188, 63, 251, 1) 15%, rgba(243, 69, 181, 1) 47%, rgba(252, 70, 170, 1) 53%, rgba(243, 69, 181, 1) 57%, rgba(188, 63, 251, 1) 93%); */
+                    background: conic-gradient(from 90deg, #ff00aa 1%, #ff00c9 15%, #8f49e0 38%, rgba(160, 61, 217, 1) 61%, #ff00b2 76%, #ff008b 100%);
+                    animation: spinBlob 8s linear infinite;
+                }
+
+                    @keyframes spinBlob {
+                        0% {
+                            transform: rotate(0deg) scale(2);
+                        }
+
+                        100% {
+                            transform: rotate(1turn) scale(2);
+                        }
+                    }
+
+            .intro {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+            }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            z-index: 1;
+
+            padding: 15px;
+            text-align: center;
+            font-size: 20px;
+
+        }
+
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+
+        z-index: 2;
+
+        /* background-color: white; */
+
+        /* border: 2px solid gray; */
+    }
+
+/* STYLING */
+
+#imp {
+    text-align: center;
+    font-size: 35px;
+
+}
+
+#sub {
+    font-size: 20px;
+
+}
+
+#current {
+    color: #0004ff;
+    border-color: #0004ff;
+}
+
+#bold {
+    font-weight: bold;
+}
+
+#emph {
+    font-style: italic;
+}
